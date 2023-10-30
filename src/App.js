@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import NavbarComponent from './Components/Navbar';
+import Banner from "./Components/Banner";
+import { Skills } from './Components/Skills';
+import { Contact } from './Components/ContactForm';
+import { Footer } from './Components/Footer';
+import { useRef } from 'react';
+
 
 function App() {
+  const divRef = useRef();
+
+  const scrollToDiv = () => {
+    divRef.current.scrollIntoView({ behaviour: "smooth" })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavbarComponent scrollToDiv={scrollToDiv} />
+      <Banner scrollToDiv={scrollToDiv} />
+      <Skills />
+      <Contact divRef={divRef} />
+      <Footer />
+    </>
   );
 }
 
