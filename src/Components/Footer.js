@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import logo from "../assets/img/logo.svg";
+import logo from "../assets/img/logo.png";
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <footer className="footer">
             <Container>
@@ -17,3 +17,5 @@ export const Footer = () => {
         </footer>
     )
 }
+
+export default Footer;

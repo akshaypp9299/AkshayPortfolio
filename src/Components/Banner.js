@@ -6,7 +6,7 @@ const Banner = ({ scrollToDiv }) => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState("");
-    const toRotate = ["web Developer", "web Designer", "UI/UX designer"]
+    const toRotate = ["Frontend Developer", "Web Developer", "React Developer"]
     const period = 2000;
     const [delta, setDelta] = useState(300 - Math.random() * 100);
 
@@ -41,14 +41,15 @@ const Banner = ({ scrollToDiv }) => {
     return (
         <section className='banner' id="home">
             <Container>
-                <Row className="align-items-center text-center">
+                <Row className="align-items-center">
                     <Col xs={12} md={12} xl={12}>
-                        <span className='tagline mb-5'>
-                            Welcome to my Portfolio
+                        <span className='secondaryColor' style={{ font: "500 16px Centra" }}>
+                            Hi, my name is
                         </span>
-                        <h1>{`I am `}<span className='wrap'>{text}</span></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsa officiis quia et quis praesentium sapiente omnis sint odit vel aliquid temporibus ratione obcaecati illo voluptate est porro cum voluptates!</p>
-                        <button onClick={() => scrollToDiv()}>Lets Connect <ArrowRightCircle size={25} /></button>
+                        <h1 className='my-4 offWhite'>Akshay Polshettiwar.</h1>
+                        <h1 className='my-4' style={{ color: "#8892B0" }}>{`I am `}<span className='wrap text-white'>{text}</span></h1>
+                        <p>I am a Web Developer with a focus on building exceptional digital experiences, human-centered products. At miniOrange, currently I'm committed to leveraging my skills to engineer innovative solutions that prioritize inclusivity.</p>
+                        <button className='secondaryColor' onClick={() => scrollToDiv()}>Say Hello <ArrowRightCircle size={25} /></button>
                     </Col>
                 </Row>
             </Container>

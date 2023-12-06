@@ -6,7 +6,7 @@ import TrackVisibility from 'react-on-screen';
 import emailjs from "emailjs-com"
 import { ToastContainer } from "react-toastify";
 
-export const Contact = ({ divRef }) => {
+const Contact = ({ divRef }) => {
 
     const [status, setStatus] = useState({
         success: "",
@@ -95,3 +95,5 @@ export const Contact = ({ divRef }) => {
         </section>
     )
 }
+
+export default Contact;
